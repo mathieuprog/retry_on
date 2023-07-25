@@ -53,6 +53,7 @@ it a specified number of times with a delay between each attempt.
 import RetryOn, only: [retry_on_unique_constraint: 2]
 
 retry_on_unique_constraint(
+  Repo,
   :my_field,
   fn _ ->
     # Code that performs an operation which may result in a unique constraint error on `:my_field`.
